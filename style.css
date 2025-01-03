@@ -1,0 +1,260 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #090909, #1b1871);
+    color: #f0f0f0;
+    transition: 0.5s ease, color 0.3s ease;
+}
+
+/* Header Styles */
+.header {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    /* position: sticky; */
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: slideDown 1s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.header-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Content Layout */
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Description Section */
+.description-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.description-text {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.description-text:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Button Styles */
+/* From Uiverse.io by nima-mollazadeh */ 
+.btn{
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    
+
+}
+.button {
+    position: relative;
+    text-decoration:none;
+    color: #fff;
+    background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-size: 1.25em;
+    cursor: pointer;
+  }
+
+  .button span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: #272727;
+    border-radius: 9px;
+    transition: 0.5s;
+  }
+  
+  .button:hover::before {
+    opacity: 0.7;
+  }
+  
+  .button::after {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+    border-radius: 9px;
+    transition: 0.5s;
+    opacity: 0;
+    filter: blur(20px);
+  }
+  
+  .button:hover:after {
+    opacity: 1;
+  }
+
+/* Image Container */
+.image-container {
+    flex: 1;
+    min-width: 100px;
+    /* background: linear-gradient(120deg, #e0e0e0, #cccccc); */
+    border-radius: 12px;
+    min-height: 100px;
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
+    /* transition: box-shadow 0.3s ease; */
+}
+img{
+    width: 85%;
+    height: auto;
+}
+
+.image-container:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Steps Section */
+.steps-section {
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    border-radius: 12px;
+}
+
+.steps-section h2 {
+    color: aqua;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 5px rgba(0, 255, 255, 0.5);
+}
+
+.steps-section ol {
+    list-style: none;
+    counter-reset: step-counter;
+    padding: 0;
+}
+
+.steps-section li {
+    counter-increment: step-counter;
+    margin-bottom: 1.5rem;
+    padding-left: 3rem;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.steps-section li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #4ecdc4;
+    color: white;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.steps-section strong {
+    display: block;
+    color: white;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Benefits Section */
+.benefits-section {
+    /* background: linear-gradient(90deg, #4ecdc4, #3aa89f); */
+    color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+}
+
+.benefits-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.benefits-section ul {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.benefits-section li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.benefits-section li:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer Styles */
+.footer {
+    /* background: linear-gradient(90deg, #333, #555); */
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 1.5rem;
+    /* border-top: 3px solid #4ecdc4; */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .header-title {
+        font-size: 2.2rem;
+    }
+    
+    .description-container,
+    .image-container {
+        min-width: 100%;
+    }
+}
