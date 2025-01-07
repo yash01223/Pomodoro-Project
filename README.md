@@ -1,2 +1,2 @@
 # Pomodoro-Project
-site :http://127.0.0.1:5501/index.html
+site : https://keen-stardust-1620ac.netlify.app/
